@@ -4,6 +4,12 @@ spring:
     password: root
     url: jdbc:mysql://10.0.0.100:3306/gulimall_sms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr:127.0.0.1:8848
+  application:
+    name: gulimall-coupon
 
 # MapperScan
 # sql映射文件位置
@@ -15,4 +21,4 @@ mybatis-plus:
 #      配置端口
 server:
   port: 7000
-  address: localhost
+
