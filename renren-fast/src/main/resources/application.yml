@@ -42,7 +42,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848 # nacos
+        server-addr: 10.0.0.100:8848 # nacos
 #  resources:
 #    add-mappings: false
 
