@@ -10,7 +10,7 @@ server:
 alibaba:
   cloud:
     access-key: LTAI5tEZsKXCuLE1R3cpcfpd
-    secret-key: a909GTFmTRAizZExC5jM7ecFUKk9u6
+    secret-key: 
     oss:
       endpoint: oss-cn-beijing.aliyuncs.com
       bucket: gulimall-kyon
