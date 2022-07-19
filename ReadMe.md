@@ -192,3 +192,38 @@ cat ~/.ssh/id_rsa.pub
 ssh -T git@github.com
 ```
 
+## 后台校验
+
+### JSR303
+
+```xml
+<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+<dependency>
+    <groupId>javax.validation</groupId>
+    <artifactId>validation-api</artifactId>
+    <version>2.0.1.Final</version>
+</dependency>
+```
+
+#### 使用方法
+
+在后台 Controller 接收到的数据添加 @Valid 注解
+
+```java
+@RequestMapping("/save")
+    public R save(@Valid @RequestBody BrandEntity brand){
+		brandService.save(brand);
+        return R.ok();
+    }
+```
+
+在实体类中添加具体校验规则
+
+*Integer 可以用 @NotNull 注解，不能用 @NotEmpty 和 @NotBlank*
+
+### 统一异常处理
+
+@ControllerAdvice
+
+1. 创建com/atlxc/gulimall/product/exception/GulimallExecptionControllerAdvice.java
+2. 添加注解 @ControllerAdvice(basePackages = "com/atlxc/gulimall/product/controller")
