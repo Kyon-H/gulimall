@@ -16,5 +16,6 @@ buildNumber.properties
 **/.gitignore
 
 **/target/
+**/src/test/
 
 .idea
