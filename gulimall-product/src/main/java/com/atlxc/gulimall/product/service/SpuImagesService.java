@@ -1,8 +1,8 @@
 package com.atlxc.gulimall.product.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.atlxc.common.utils.PageUtils;
 import com.atlxc.gulimall.product.entity.SpuImagesEntity;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.Map;
 

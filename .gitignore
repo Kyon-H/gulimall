@@ -15,10 +15,14 @@ buildNumber.properties
 **/.mvn
 **/.gitignore
 **/README.md
+**/node_modules
+**/build
 
 **/target/
 **/src/test/
 
 .idea
+1.idea
+
 !/.gitignore
 !/ReadMe.md

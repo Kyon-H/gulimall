@@ -57,7 +57,8 @@
 </template>
 
 <script>
-  import AddOrUpdate from './${pathName}-add-or-update'
+  import AddOrUpdate from './'
+
   export default {
     data () {
       return {
@@ -82,7 +83,7 @@
     methods: {
       // 获取数据列表
       getDataList () {
-        this.dataListLoading = true
+        this.dataListLoading = true;
         #[[this.$http({]]#
           #[[url: this.$http.adornUrl]]#('/${moduleName}/${pathName}/list'),
           method: 'get',
@@ -119,7 +120,7 @@
       },
       // 新增 / 修改
       addOrUpdateHandle (id) {
-        this.addOrUpdateVisible = true
+        this.addOrUpdateVisible = true;
         #[[this.$nextTick(() => {]]#
           this.$refs.addOrUpdate.init(id)
         })
@@ -128,7 +129,7 @@
       deleteHandle (id) {
         var ids = id ? [id] : this.dataListSelections.map(item => {
           return item.${pk.attrname}
-        })
+        });
         #[[this.$confirm(`确定对[id=${ids.join(',')}]进行[${id ? '删除' : '批量删除'}]操作?`, '提示', {]]#
           confirmButtonText: '确定',
           cancelButtonText: '取消',

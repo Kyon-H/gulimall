@@ -2,12 +2,14 @@ package com.atlxc.gulimall.product.controller;
 
 import com.atlxc.common.utils.PageUtils;
 import com.atlxc.common.utils.R;
+import com.atlxc.common.valid.AddGroup;
+import com.atlxc.common.valid.UpdateGroup;
 import com.atlxc.gulimall.product.entity.BrandEntity;
 import com.atlxc.gulimall.product.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -50,22 +52,20 @@ public class BrandController {
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@Valid @RequestBody BrandEntity brand){
+    public R save(@Validated({AddGroup.class}) @RequestBody BrandEntity brand){
         brandService.save(brand);
 
         return R.ok();
     }
-
     /**
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody BrandEntity brand){
+    public R update(@Validated({UpdateGroup.class}) @RequestBody BrandEntity brand){
 		brandService.updateById(brand);
 
         return R.ok();
     }
-
     /**
      * 删除
      */
@@ -75,5 +75,4 @@ public class BrandController {
 
         return R.ok();
     }
-
 }

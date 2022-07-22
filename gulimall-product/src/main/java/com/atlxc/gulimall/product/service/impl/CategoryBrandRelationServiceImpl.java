@@ -1,16 +1,16 @@
 package com.atlxc.gulimall.product.service.impl;
 
-import org.springframework.stereotype.Service;
-import java.util.Map;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.atlxc.common.utils.PageUtils;
 import com.atlxc.common.utils.Query;
-
 import com.atlxc.gulimall.product.dao.CategoryBrandRelationDao;
 import com.atlxc.gulimall.product.entity.CategoryBrandRelationEntity;
 import com.atlxc.gulimall.product.service.CategoryBrandRelationService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.stereotype.Service;
+
+import java.util.Map;
 
 
 @Service("categoryBrandRelationService")

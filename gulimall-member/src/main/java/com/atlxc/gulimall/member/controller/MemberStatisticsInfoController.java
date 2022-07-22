@@ -1,19 +1,14 @@
 package com.atlxc.gulimall.member.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.atlxc.gulimall.member.entity.MemberStatisticsInfoEntity;
-import com.atlxc.gulimall.member.service.MemberStatisticsInfoService;
 import com.atlxc.common.utils.PageUtils;
 import com.atlxc.common.utils.R;
+import com.atlxc.gulimall.member.entity.MemberStatisticsInfoEntity;
+import com.atlxc.gulimall.member.service.MemberStatisticsInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.Map;
 
 
 
